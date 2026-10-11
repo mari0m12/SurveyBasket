@@ -10,6 +10,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();  //****** Swagger
 builder.Services.AddSwaggerGen();    //****** Swagger
 
+builder.Services.AddScoped<IPollServices, PollServices>(); // **
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
